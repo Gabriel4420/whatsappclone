@@ -2,8 +2,7 @@
 
 ## Adaptado por Gabriel Rodrigues
 
-! [] (https://img.shields.io/github/languages/top/Gabriel4420/whatsappclone)! [] (https://img.shields.io/github/languages/count/Gabriel4420/whatsappclone)
-
+![](https://img.shields.io/github/languages/top/Gabriel4420/whatsappclone) ![](https://img.shields.io/github/languages/count/Gabriel4420/whatsappclone)
 ## Scripts Disponíveis
 
 No diretório do projeto, você pode executar:
