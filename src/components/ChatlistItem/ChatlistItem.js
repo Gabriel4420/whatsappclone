@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
 
-export default ({onClick, active}) => {
+export default ({onClick, active, data}) => {
   return (
-    <div className={`chatListItem ${active ? 'active':''}`} onClick={onClick}>
-        <img className="chatListItem--avatar" src="https://www.w3schools.com/howto/img_avatar2.png" alt="avatar"/>
+    <div className={`chatListItem ${active? 'active':''}`} onClick={onClick}>
+        <img className="chatListItem--avatar" src={data.avatar} alt="avatar"/>
          <div className="chatListItem--lines">
              <div className="chatListItem--line">
                 <div className="chatListItem--name">
-                  Amanda 
+                  {data.title}
                 </div>
                 <div className="chatListItem--date">
                   02:00
@@ -17,7 +17,7 @@ export default ({onClick, active}) => {
 
              <div className="chatListItem--line">
                 <div className="chatListItem--lastMsg">
-                  <p>Boa noite, gostosão </p>
+                  <p>Hey There, Im Using Whatsapp Clone </p>
                 </div>               
              </div>
          </div>

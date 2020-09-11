@@ -10,13 +10,13 @@ import ChatWindow from './components/Chat/ChatWindow';
 
 export default () => {
   
-  const [chatlist, setChatList] = useState([{chatId:1,title:'fulano de tal', image:'https://www.w3schools.com/howto/img_avatar2.png'},
+  const [chatlist, setChatList] = useState([{chatId:1,title:'fulano de tal', avatar:'https://www.w3schools.com/howto/img_avatar2.png'},
                                             
-                                            {chatId:2,title:'fulano de tal', image:'https://www.w3schools.com/howto/img_avatar2.png'},
+                                            {chatId:2,title:'fulano de tal', avatar:'https://www.w3schools.com/howto/img_avatar2.png'},
                                             
-                                            {chatId:3,title:'fulano de tal', image:'https://www.w3schools.com/howto/img_avatar2.png'},
+                                            {chatId:3,title:'fulano de tal', avatar:'https://www.w3schools.com/howto/img_avatar2.png'},
                                             
-                                            {chatId:4,title:'fulano de tal', image:'https://www.w3schools.com/howto/img_avatar2.png'}]);
+                                            {chatId:4,title:'fulano de tal', avatar:'https://www.w3schools.com/howto/img_avatar2.png'}]);
   
   const [activeChat, setActiveChat] = useState({});
 
@@ -53,6 +53,7 @@ export default () => {
           <div className="chatlist">
             {chatlist.map((item, key) => (
               <ChatListItem key={key}
+                data = {item}
                 active={activeChat.chatId === chatlist[key].chatId}
                 onClick={() =>setActiveChat(chatlist[key])}
               />
