@@ -5,6 +5,19 @@
   height:70px;
 }
 
+.chatListItem.active{
+  background-color:#477064;
+  
+}
+
+.chatListItem.active .chatListItem--name , 
+.chatListItem.active .chatListItem--lastMsg ,
+.chatListItem.active .chatListItem--date {
+  color: white;
+}
+
+ 
+
 .chatListItem:hover {
   background-color: #504a4a;
   color:white;
