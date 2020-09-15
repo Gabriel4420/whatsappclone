@@ -27,7 +27,7 @@ export default () => {
   const [emojiOpen,setEmojiOpen] = useState(false);
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
-  const [list, setlist] = useState([]);
+  const [list, setlist] = useState([{body:'bla bla bla'},{body:'bla bla '},{body:'bla bla bla bla'}]);
 
   const handleEmojiClick = (e, emojiObject) => {
     setText( text + emojiObject.emoji)
@@ -65,7 +65,7 @@ export default () => {
 
   return (
       <div className="chatWindow">
-        <header className="chatWindow--header">
+        <div className="chatWindow--header">
             <div className="chatWindow--headerInfo">
               <img className="chatWindow--avatar" src="https://www.w3schools.com/howto/img_avatar2.png" alt="avatar"/>
               <div className="chatWindow--name">Gabriel Rodrigues</div>
@@ -81,15 +81,15 @@ export default () => {
                 <MoreVertIcon style={{color:'#919191'}}/>
               </div>
             </div>
-        </header>
+        </div>
 
-         <main className="chatWindow--body">
+         <div className="chatWindow--body">
               {list.map((item,key) => (
                   <MessageItem key={key}
                     data={item}
                    />
               ))}
-         </main>
+         </div>
 
          <div className="chatWindow--emojiArea"  style={{height:emojiOpen? '300px':'0'}}>
            <EmojiPicker disableSearchBar disableSkinTonePicker 
@@ -97,7 +97,7 @@ export default () => {
            />
          </div>
 
-          <footer className="chatWindow--footer">
+          <div className="chatWindow--footer">
 
             <div className="chatWindow--pre">
               
@@ -132,7 +132,7 @@ export default () => {
               }
             </div>
 
-          </footer>
+          </div>
       </div>
   );
 }

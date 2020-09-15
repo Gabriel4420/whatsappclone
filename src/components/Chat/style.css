@@ -52,6 +52,7 @@
 
 .chatWindow--body{
   flex: 1;
+  padding: 20px 30px;
   overflow-y: auto;
   background-color:#e08f3d;
   background-size: cover;
@@ -94,8 +95,8 @@
   overflow-y: hidden;
   transition: all ease 0.3s;
 }
-.emoji-picker-react aside{
-  width:auto;
+aside.emoji-picker-react {
+  width: auto !important;
   background:none;
 }
 
