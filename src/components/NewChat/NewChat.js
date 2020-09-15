@@ -5,7 +5,10 @@ import './style.css';
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-export default () => {
+export default ({user,chalist,show,setShow}) => {
+  const handleClose = () => {
+    setShow(false);
+  }
   const [list, setList] = useState([{
     id:123, avatar:'https://www.w3schools.com/howto/img_avatar2.png', name:'Gabriel Rodrigues'
   },{
@@ -16,10 +19,12 @@ export default () => {
     id:123, avatar:'https://www.w3schools.com/howto/img_avatar2.png', name:'Gabriel Rodrigues'
   }])
     return (
-      <div className="newChat">
+      <div className="newChat" style={{left: show?0:-415}}>
         <div className="newChat--head">
             <div className="newChat--backbutton">
-              <ArrowBackIcon style={{color:'#ffff'}}/> 
+              <ArrowBackIcon style={{color:'#ffff'}} 
+                onClick={handleClose}
+              /> 
             </div>
             <div className="newChat--headtitle">
               Nova Conversa
