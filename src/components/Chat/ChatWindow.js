@@ -1,5 +1,5 @@
 /* Biblioteca Padrão React */
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 /* Link CSS */
 import './style.css';
 /* Componentes da mensagem do corpo */
@@ -15,7 +15,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import SendIcon from '@material-ui/icons/Send';
 import MicIcon from '@material-ui/icons/Mic';
 
-export default () => {
+export default ({user}) => {
+
+  const body = useRef();
 
   let recognition = null;
   let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition;
@@ -27,7 +29,13 @@ export default () => {
   const [emojiOpen,setEmojiOpen] = useState(false);
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
-  const [list, setlist] = useState([{body:'bla bla bla'},{body:'bla bla '},{body:'bla bla bla bla'}]);
+  const [list, setlist] = useState([{author:123, body:'bla bla bla'},{author:123, body:'bla bla '},{author:1234,body:'bla bla bla bla'},{author:123, body:'bla bla bla'},{author:123, body:'bla bla '},{author:1234,body:'bla bla bla bla'},{author:123, body:'bla bla bla'},{author:123, body:'bla bla '},{author:1234,body:'bla bla bla bla'},{author:123, body:'bla bla bla'},{author:123, body:'bla bla '},{author:1234,body:'bla bla bla bla'},{author:123, body:'bla bla bla'},{author:123, body:'bla bla '},{author:1234,body:'bla bla bla bla'},{author:123, body:'bla bla bla'},{author:123, body:'bla bla '},{author:1234,body:'bla bla bla bla'}]);
+
+  useEffect(() => {
+    if(body.current.scrollHeight > body.current.offsetHeight){
+      body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight;
+    }
+  },[list])
 
   const handleEmojiClick = (e, emojiObject) => {
     setText( text + emojiObject.emoji)
@@ -83,10 +91,11 @@ export default () => {
             </div>
         </div>
 
-         <div className="chatWindow--body">
+         <div ref={body} className="chatWindow--body">
               {list.map((item,key) => (
                   <MessageItem key={key}
                     data={item}
+                    user={user}
                    />
               ))}
          </div>
