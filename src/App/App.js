@@ -22,13 +22,16 @@ export default () => {
   /* Verifica qual chat está ativo  */
   const [activeChat, setActiveChat] = useState({});
   /* Informações do usuario logado */
-  const [user, setUser] = useState({
-    id:'gKkZWjWO89aUkWaG2p7TG27OZBa2',
-    name:'Gabriel Rodrigues',
-    avatar:'https://graph.facebook.com/3285010648242330/picture'
-  });
+  const [user, setUser] = useState(null);
   const [showNewChat, setShowNewChat] = useState(false);
-
+  
+  useEffect(() => {
+    if(user !== null){
+      let unsub = Api.onChatList(user.id, setChatList);
+      return unsub;
+    }
+  }, [user]);
+  
   const handleNewChat = () => {
     setShowNewChat(true);
   }
@@ -47,12 +50,7 @@ export default () => {
     return (<Login onReceive={handleLoginData} />);
   }
 
-  useEffect(() => {
-    if(user !== null){
-      let unsub = Api.onChatList(user.id, setChatList);
-      return unsub;
-    }
-  }, [user]);
+  
 
   return (
     /* Div Principal */
@@ -109,7 +107,8 @@ export default () => {
         <div className="contentArea">
           
           {activeChat.chatId !== undefined &&
-            <ChatWindow user={user} />
+            <ChatWindow user={user} 
+                        data= {activeChat}  />
           }
           {activeChat.chatId === undefined &&
             <ChatIntro />
