@@ -117,7 +117,7 @@ export default {
       if(uData.chats){
         let chats = [...uData.chats];
         for(let e in chats){
-          if(chats[e].chatId === chatData.chatId){
+          if(chats[e].chatId == chatData.chatId){
             chats[e].lastMsg = body;
             chats[e].lastMessageDate = now;
           }

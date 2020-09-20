@@ -1,6 +1,60 @@
-.Login{
+
+  .Login{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Login--button {
+    background-color: #2159c0; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    position: relative;
+    top:200px;
+    left: -500px;
+  }
+
+.btn--face {
+  font-style: none;
+  text-align: center;
+  color: white;
+  font-style: normal;
+  text-decoration: none;
+  
+
+}
+
+.section-mkt{
+  width:-150px;
   height: 100vh;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.Login--title{
+  margin: 0;  
+  margin-bottom:400px;
+  float: left;
+  text-align: center;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top:0px;
+  left: 500px;
+  
+  
 }
