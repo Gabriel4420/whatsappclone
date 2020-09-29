@@ -1,4 +1,7 @@
-
+  body{
+    background-color:rgb(0, 157, 0);
+  }
+  
   .Login{
     height: 100vh;
     display:flex;
@@ -48,7 +51,7 @@
   margin-bottom:400px;
   float: left;
   text-align: center;
-  
+  color:white;
   display: flex;
   justify-content: center;
   align-items: center;
