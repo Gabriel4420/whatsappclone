@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import Api from '../../Backend/Api';
+import Api from '../../backend/Api'
 
 export default ({onReceive}) => {
 

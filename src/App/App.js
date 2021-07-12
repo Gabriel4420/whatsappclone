@@ -13,7 +13,7 @@ import ChatIntro from '../components/ChatIntro/ChatIntro';
 import ChatWindow from '../components/Chat/ChatWindow';
 import NewChat from '../components/NewChat/NewChat';
 import Login from '../components/Login/Login';
-import Api from '../Backend/Api';
+import Api from '../backend/Api'
 
 export default () => {
 

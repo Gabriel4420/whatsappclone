@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './style.css';
-import Api from '../../Backend/Api';
+import Api from '../../backend/Api'
 /* Icones */
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';

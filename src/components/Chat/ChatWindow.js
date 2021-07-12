@@ -4,7 +4,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import './style.css';
 /* Componentes da mensagem do corpo */
 import MessageItem from '../MessageItem/MessageItem';
-import Api from '../../Backend/Api';
+import Api from '../../backend/Api'
 /* Componentes da barra de emoji */
 import EmojiPicker from 'emoji-picker-react';
 /* Componentes de Icones */
