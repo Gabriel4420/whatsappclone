@@ -1,5 +1,5 @@
 <h1 align="center">
-  💬 WhatsApp Clone 💬;
+  💬 WhatsApp Clone 💬
 </h1>
 
 <p align="center">
